@@ -98,7 +98,7 @@ def unpack_archive(path):
 
     name_file = os.path.basename(path)
     file_path = os.path.dirname(path)
-    name, extension = os.path.splitext(name_file)
+    name = os.path.splitext(name_file)[0]
     shutil.unpack_archive(path, os.path.join(file_path, name))
 
 
@@ -115,7 +115,6 @@ for c, l in zip(CYRILLIC_SYMBOLS, TRANSLATION):
 
 path = sys.argv[1]
 
-print(path)
 
 if os.path.exists(path):
 
