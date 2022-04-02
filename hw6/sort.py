@@ -63,11 +63,17 @@ def sorted_files(path):
                     folder_destination, name_file))
             else:
                 folder_destination = os.path.join(file_path, folder)
-                shutil.move(path, os.path.join(
-                    folder_destination, name_file))
+                try:
+                    os.mkdir(folder_destination, mode=0o777, dir_fd=None)
+                    shutil.move(path, os.path.join(
+                        folder_destination, name_file))
+                except FileExistsError:
+                    shutil.move(path, os.path.join(
+                        folder_destination, name_file))
 
             if folder == 'archives':
-                unpack_archive(path)
+                unpack_archive(os.path.join(
+                    folder_destination, name_file))
 
 
 def search_for_items(path, reset=True):
@@ -114,7 +120,6 @@ for c, l in zip(CYRILLIC_SYMBOLS, TRANSLATION):
     TRANS[ord(c.upper())] = l.upper()
 
 path = sys.argv[1]
-
 
 if os.path.exists(path):
 
