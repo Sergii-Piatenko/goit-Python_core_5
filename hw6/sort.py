@@ -27,7 +27,7 @@ def normalize(file_name):
                 result += letter
                 break
 
-            elif not re.findall(r'[А-яёЁґҐ]', letter):
+            elif not re.findall(r'[А-яёЁіІїЇґҐ]', letter):
                 result += '_'
                 break
 
@@ -109,8 +109,8 @@ def unpack_archive(path):
 
 
 CYRILLIC_SYMBOLS = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяєіїґ"
-TRANSLATION = ("a", "b", "v", "g", "d", "e", "e", "j", "z", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u",
-               "f", "h", "ts", "ch", "sh", "sch", "", "y", "", "e", "yu", "u", "ja", "je", "ji", "g")
+TRANSLATION = ("a", "b", "v", "h", "d", "e", "e", "zh", "z", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u",
+               "f", "kh", "ts", "ch", "sh", "sch", "", "y", "", "e", "yu", "ja", "je", "i", "i", "g")
 
 TRANS = {}
 
