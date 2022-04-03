@@ -45,8 +45,6 @@ def sorted_files(path):
                'archives': ('ZIP', 'GZ', 'TAR', 'RAR'), }
     unknown_extensions = True
     name_file = os.path.basename(path)
-    file_path = os.path.dirname(path)
-    end_folder = os.path.split(file_path)[-1]
 
     if re.findall(r'[А-яёЁґҐ]+', name_file):
         name_file = normalize(name_file)
