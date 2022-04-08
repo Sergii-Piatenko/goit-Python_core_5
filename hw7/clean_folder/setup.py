@@ -4,7 +4,7 @@ setup(
     name='clean',
     version='1',
     description='Folder parsing script',
-    url='http://github.com/dummy_user/useful',
+    url='https://github.com/Sergii-Piatenko/goit-Python_core_5/tree/main/hw7/clean_folder',
     author='Serhii Piatenko',
     author_email='sergiy.pyatenko@gmail.com',
     license='MIT',
