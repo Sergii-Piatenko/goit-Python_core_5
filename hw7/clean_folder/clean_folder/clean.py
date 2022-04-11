@@ -134,6 +134,3 @@ def main():
 
     else:
         print('Not correct path')
-
-
-main()
