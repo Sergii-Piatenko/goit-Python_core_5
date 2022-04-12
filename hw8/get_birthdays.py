@@ -24,6 +24,8 @@ def get_birthdays_per_week(users):
     for weekday in birthdays_this_week:
         print(f"{weekday}: {', '.join(birthdays_this_week.get(weekday))}")
 
+# For tsting list users
+
 
 users = [{'name': 'Olia', 'birthday': datetime(year=1997, month=4, day=17)},  # Thursday
          {'name': 'Sasha', 'birthday': datetime(
