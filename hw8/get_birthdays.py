@@ -36,5 +36,5 @@ users = [{'name': 'Olia', 'birthday': datetime(year=1997, month=4, day=17)},  # 
              year=2000, month=4, day=15)},  # Saturday
          {'name': 'Katia', 'birthday': datetime(year=1988, month=4, day=20)}]  # Wednesday
 
-
-get_birthdays_per_week(users)
+if __name__ == "__main__":
+    get_birthdays_per_week(users)
